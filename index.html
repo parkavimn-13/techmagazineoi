@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Unique Form</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <form id="userForm" novalidate>
+      <h2>User Information Form</h2>
+
+      <!-- Name -->
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+      </div>
+
+      <!-- Age -->
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="1" max="120" required placeholder="Enter your age">
+      </div>
+
+      <!-- Gender -->
+      <fieldset class="form-group">
+        <legend>Gender</legend>
+        <label><input type="radio" name="gender" value="Male" required> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+        <label><input type="radio" name="gender" value="Other"> Other</label>
+      </fieldset>
+
+      <!-- Dropdown -->
+      <div class="form-group">
+        <label for="general">General Category</label>
+        <select id="general" name="general" required>
+          <option value="">-- Select --</option>
+          <option value="Student">Student</option>
+          <option value="Employee">Employee</option>
+          <option value="Business">Business</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
+      <!-- Date -->
+      <div class="form-group">
+        <label for="date">Select Date</label>
+        <input type="date" id="date" name="date" required>
+        <span id="dateSticker" class="date-sticker">📅 No date chosen</span>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="example@email.com">
+      </div>
+
+      <!-- Address -->
+      <div class="form-group">
+        <label for="address">Address</label>
+        <textarea id="address" name="address" rows="3" required placeholder="Enter your address"></textarea>
+      </div>
+
+      <!-- Buttons -->
+      <div class="buttons">
+        <button type="reset" id="resetBtn">Reset</button>
+        <button type="submit">Send & Alert</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
